@@ -12,7 +12,7 @@ export const Route = createFileRoute("/contact")({
       {
         name: "description",
         content:
-          "Visit Your Brand at 320 Building, 4th Floor, Shop 423D, West Street, City Centre. WhatsApp +27 79 909 0379. Nationwide delivery.",
+          "Visit Your Brand at 123 Main Street, City Centre. WhatsApp +00 000 000 0000. Nationwide delivery.",
       },
       { property: "og:title", content: "Contact Your Brand Clothing" },
       { property: "og:description", content: "City Centre storefront, WhatsApp support and nationwide delivery." },
@@ -50,9 +50,9 @@ function Contact() {
                   <br />
                   West Street
                   <br />
-                  320 Building, 4th Floor
+                  Main Street, 4th Floor
                   <br />
-                  Shop 423D
+                  Shop 1
                 </p>
               </div>
             </div>

@@ -52,9 +52,9 @@ export function Footer() {
               <p className="flex gap-3">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0" strokeWidth={1.5} />
                 <span>
-                  City Centre, West Street, 320 Building,
+                  City Centre, West Street, Main Street,
                   <br />
-                  4th Floor, Shop 423D
+                  Shop 1
                 </span>
               </p>
               <p className="flex items-center gap-3">

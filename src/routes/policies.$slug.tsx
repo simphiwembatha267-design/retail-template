@@ -7,7 +7,7 @@ const content: Record<string, { title: string; body: string[] }> = {
     body: [
       "We deliver nationwide across South Africa via courier. Orders placed before 13:00 on a working day are dispatched the same day.",
       "Standard courier takes 2–4 working days and is free on orders over R1500. Express courier takes 1–2 working days at R160.",
-      "Collection is available from our City Centre store: 320 Building, 4th Floor, Shop 423D, West Street.",
+      "Collection is available from our City Centre store: 123 Main Street.",
       "Tracking details are sent by SMS and email as soon as your parcel is scanned by the courier.",
     ],
   },

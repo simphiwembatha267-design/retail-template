@@ -24,7 +24,7 @@ export const Route = createFileRoute("/about")({
 
 const timeline = [
   { year: "2019", t: "First run", d: "Fifty hoodies pressed by hand and sold out of a backpack on West Street." },
-  { year: "2021", t: "Shop 423D", d: "The 320 Building storefront opens — a home for the brand in City Centre." },
+  { year: "2021", t: "Shop 1", d: "The Main Street storefront opens — a home for the brand in City Centre." },
   { year: "2023", t: "Nationwide", d: "Courier partnerships open every province to Your Brand deliveries." },
   { year: "2025", t: "Atelier line", d: "In-house pattern development and 480gsm garment-dyed fleece." },
 ];
