@@ -61,7 +61,7 @@ export function Nav() {
           <Menu className="h-5 w-5" strokeWidth={1.5} />
         </button>
 
-        <Link to="/" className="shrink-0" aria-label="AnadaOne home">
+        <Link to="/" className="shrink-0" aria-label="Your Brand home">
           <Wordmark />
         </Link>
 

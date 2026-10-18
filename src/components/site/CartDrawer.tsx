@@ -123,7 +123,7 @@ export function CartDrawer() {
               />
               <button
                 type="button"
-                onClick={() => setApplied(promo.trim().toUpperCase() === "ANADA10" ? subtotal * 0.1 : 0)}
+                onClick={() => setApplied(promo.trim().toUpperCase() === "SAVE10" ? subtotal * 0.1 : 0)}
                 className="h-11 rounded-full border border-border px-5 text-[11px] uppercase tracking-[0.18em]"
               >
                 Apply

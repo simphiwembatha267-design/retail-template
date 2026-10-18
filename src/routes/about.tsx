@@ -1,21 +1,21 @@
 import { createFileRoute } from "@tanstack/react-router";
-import coverHero from "@/assets/cover-hero.jpg.asset.json";
-import storeEditorial from "@/assets/store-editorial.jpg.asset.json";
+const coverHero = { url: "" };
+const storeEditorial = { url: "" };
 import { Reveal } from "@/components/site/Reveal";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "Our Story — AnadaOne Clothing" },
+      { title: "Our Story — Your Brand Clothing" },
       {
         name: "description",
         content:
-          "AnadaOne Clothing began in Durban CBD with one belief: South African streetwear can stand beside anything made abroad. Read the story.",
+          "Your Brand Clothing began in City Centre with one belief: South African streetwear can stand beside anything made abroad. Read the story.",
       },
-      { property: "og:title", content: "Our Story — AnadaOne Clothing" },
+      { property: "og:title", content: "Our Story — Your Brand Clothing" },
       {
         property: "og:description",
-        content: "From a single shop on West Street to nationwide delivery.",
+        content: "From a single shop on Main Street to nationwide delivery.",
       },
     ],
   }),
@@ -23,9 +23,9 @@ export const Route = createFileRoute("/about")({
 });
 
 const timeline = [
-  { year: "2019", t: "First run", d: "Fifty hoodies pressed by hand and sold out of a backpack on West Street." },
-  { year: "2021", t: "Shop 423D", d: "The 320 Building storefront opens — a home for the brand in Durban CBD." },
-  { year: "2023", t: "Nationwide", d: "Courier partnerships open every province to AnadaOne deliveries." },
+  { year: "2019", t: "First run", d: "Fifty hoodies pressed by hand and sold out of a backpack on Main Street." },
+  { year: "2021", t: "Shop 1", d: "The Main Street storefront opens — a home for the brand in City Centre." },
+  { year: "2023", t: "Nationwide", d: "Courier partnerships open every province to Your Brand deliveries." },
   { year: "2025", t: "Atelier line", d: "In-house pattern development and 480gsm garment-dyed fleece." },
 ];
 
@@ -35,12 +35,12 @@ function About() {
       <section className="relative h-[70vh] min-h-[420px] overflow-hidden bg-black">
         <img
           src={storeEditorial.url}
-          alt="AnadaOne store editorial in Durban"
+          alt="Your Brand store editorial in your city"
           className="absolute inset-0 h-full w-full object-cover opacity-80"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-black/20" />
         <div className="relative mx-auto flex h-full max-w-[1600px] flex-col justify-end px-5 pb-16 md:px-10">
-          <p className="text-[11px] uppercase tracking-[0.3em] text-white/70">Since Durban</p>
+          <p className="text-[11px] uppercase tracking-[0.3em] text-white/70">Since your city</p>
           <h1 className="display-xl mt-5 max-w-[14ch] text-[clamp(2.2rem,7vw,5.5rem)] text-white">
             The story behind the mark
           </h1>
@@ -55,7 +55,7 @@ function About() {
             </p>
             <div className="mt-8 space-y-5 text-sm leading-relaxed text-muted-foreground">
               <p>
-                AnadaOne began with a single question: why should quality streetwear have to be
+                Your Brand began with a single question: why should quality streetwear have to be
                 imported? What started as fifty hand-pressed hoodies became a studio, a storefront
                 and a customer base that stretches across South Africa.
               </p>
@@ -69,7 +69,7 @@ function About() {
           <Reveal delay={120}>
             <img
               src={coverHero.url}
-              alt="Model wearing AnadaOne black cap and striped polo"
+              alt="Model wearing Your Brand black cap and striped polo"
               loading="lazy"
               className="aspect-[3/4] w-full rounded-3xl object-cover shadow-soft"
             />
@@ -88,7 +88,7 @@ function About() {
           <Reveal delay={100}>
             <p className="eyebrow">Vision</p>
             <h2 className="mt-4 font-display text-2xl font-extrabold uppercase tracking-tight">
-              A Durban label spoken about in the same breath as the world's best.
+              A your city label spoken about in the same breath as the world's best.
             </h2>
           </Reveal>
         </div>

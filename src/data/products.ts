@@ -1,12 +1,12 @@
-import coverHero from "@/assets/cover-hero.jpg.asset.json";
-import creamJersey from "@/assets/cream-jersey.jpg.asset.json";
-import blackLongsleeveFront from "@/assets/black-longsleeve-front.jpg.asset.json";
-import blackLongsleeveBack from "@/assets/black-longsleeve-back.jpg.asset.json";
-import storeEditorial from "@/assets/store-editorial.jpg.asset.json";
-import blackTracksuit from "@/assets/black-tracksuit.jpg.asset.json";
-import greenPoloFront from "@/assets/green-polo-front.jpg.asset.json";
-import greenPoloStreet from "@/assets/green-polo-street.jpg.asset.json";
-import logoCap from "@/assets/logo.jpg.asset.json";
+const coverHero = { url: "" };
+const creamJersey = { url: "" };
+const blackLongsleeveFront = { url: "" };
+const blackLongsleeveBack = { url: "" };
+const storeEditorial = { url: "" };
+const blackTracksuit = { url: "" };
+const greenPoloFront = { url: "" };
+const greenPoloStreet = { url: "" };
+const logoCap = { url: "" };
 
 export type Product = {
   id: string;
@@ -50,7 +50,7 @@ export const products: Product[] = [
     sizes: ["S", "M", "L", "XL"],
     stock: 42,
     description:
-      "Cream boxy jersey with the ANADAONE YACONSA graphic. Soft heavyweight cotton with a structured drop shoulder.",
+      "Cream boxy jersey with the YOUR BRAND YACONSA graphic. Soft heavyweight cotton with a structured drop shoulder.",
     createdAt: 4,
     sold: 640,
   },
@@ -64,7 +64,7 @@ export const products: Product[] = [
     sizes: ["S", "M", "L", "XL", "2XL"],
     stock: 9,
     description:
-      "Green polo with contrast white collar and ANADAONE shoulder tape. A relaxed cut with clean finishing.",
+      "Green polo with contrast white collar and YOUR BRAND shoulder tape. A relaxed cut with clean finishing.",
     createdAt: 3,
     sold: 180,
   },
@@ -100,7 +100,7 @@ export const products: Product[] = [
   {
     id: "6",
     slug: "west-street-polo",
-    name: "West Street Polo",
+    name: "Main Street Polo",
     price: 520,
     category: "Polos",
     images: [greenPoloStreet.url, greenPoloFront.url],
@@ -108,7 +108,7 @@ export const products: Product[] = [
     sizes: ["S", "M", "L", "XL", "2XL"],
     stock: 33,
     description:
-      "Green polo with the ANADAONE shoulder tape, photographed on the street. Built for everyday wear.",
+      "Green polo with the YOUR BRAND shoulder tape, photographed on the street. Built for everyday wear.",
     createdAt: 6,
     sold: 95,
   },
@@ -135,7 +135,7 @@ export const products: Product[] = [
     images: [blackLongsleeveBack.url, logoCap.url],
     sizes: ["One Size"],
     stock: 0,
-    description: "White bucket hat with ANADAONE vertical branding. Lightweight cotton with a structured brim.",
+    description: "White bucket hat with YOUR BRAND vertical branding. Lightweight cotton with a structured brim.",
     createdAt: 1,
     sold: 260,
   },
@@ -152,5 +152,5 @@ export const formatPrice = (v: number) =>
     maximumFractionDigits: 0,
   }).format(v);
 
-export const WHATSAPP = "+27 79 909 0379";
-export const WHATSAPP_LINK = "https://wa.me/27799090379";
+export const WHATSAPP = "+00 000 000 0000";
+export const WHATSAPP_LINK = "https://wa.me/0000000000";

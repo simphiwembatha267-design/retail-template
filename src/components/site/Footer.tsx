@@ -44,7 +44,7 @@ export function Footer() {
           <div>
             <LogoMark className="h-10 w-10" />
             <p className="mt-6 max-w-sm font-display text-3xl font-extrabold uppercase leading-[0.95] tracking-tight sm:text-4xl">
-              Built in Durban.
+              Built in your city.
               <br />
               Worn everywhere.
             </p>
@@ -52,9 +52,9 @@ export function Footer() {
               <p className="flex gap-3">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0" strokeWidth={1.5} />
                 <span>
-                  Durban CBD, West Street, 320 Building,
+                  City Centre, West Street, Main Street,
                   <br />
-                  4th Floor, Shop 423D
+                  Shop 1
                 </span>
               </p>
               <p className="flex items-center gap-3">
@@ -120,7 +120,7 @@ export function Footer() {
         </div>
 
         <p className="mt-10 text-[11px] uppercase tracking-[0.18em] text-muted-foreground">
-          © {new Date().getFullYear()} AnadaOne Clothing · Nationwide delivery across South Africa
+          © {new Date().getFullYear()} Your Brand Clothing · Nationwide delivery across South Africa
         </p>
       </div>
     </footer>

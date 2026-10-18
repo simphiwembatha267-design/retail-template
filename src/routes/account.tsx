@@ -6,9 +6,9 @@ import { cn } from "@/lib/utils";
 export const Route = createFileRoute("/account")({
   head: () => ({
     meta: [
-      { title: "Account — AnadaOne Clothing" },
-      { name: "description", content: "Sign in to track AnadaOne orders, saved pieces and delivery details." },
-      { property: "og:title", content: "Account — AnadaOne Clothing" },
+      { title: "Account — Your Brand Clothing" },
+      { name: "description", content: "Sign in to track Your Brand orders, saved pieces and delivery details." },
+      { property: "og:title", content: "Account — Your Brand Clothing" },
       { property: "og:description", content: "Track orders and saved pieces." },
     ],
   }),

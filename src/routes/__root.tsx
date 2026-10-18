@@ -40,7 +40,7 @@ function NotFoundComponent() {
   );
 }
 
-function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
+function ErrorComponent({ error, reset }: { error: unknown; reset: () => void }) {
   console.error(error);
   const router = useRouter();
   useEffect(() => {
@@ -83,11 +83,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "AnadaOne Clothing — Premium South African Streetwear" },
+      { title: "Your Brand Clothing — Premium South African Streetwear" },
       {
         name: "description",
         content:
-          "AnadaOne Clothing: premium streetwear made in Durban. Heavyweight hoodies, boxy tees and utility bottoms, delivered nationwide.",
+          "Your Brand Clothing: premium streetwear made in your city. Heavyweight hoodies, boxy tees and utility bottoms, delivered nationwide.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -138,7 +138,7 @@ function RootComponent() {
         <CartDrawer />
         <a
           href={WHATSAPP_LINK}
-          aria-label="Chat with AnadaOne on WhatsApp"
+          aria-label="Chat with Your Brand on WhatsApp"
           className="fixed bottom-5 right-5 z-40 grid h-14 w-14 place-items-center rounded-full bg-primary text-primary-foreground shadow-lift transition-transform duration-500 hover:scale-110"
         >
           <svg viewBox="0 0 24 24" fill="currentColor" className="h-6 w-6" aria-hidden="true">

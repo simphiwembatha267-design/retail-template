@@ -15,10 +15,10 @@ export const Route = createFileRoute("/product/$slug")({
   },
   head: ({ loaderData }) => ({
     meta: [
-      { title: `${loaderData?.name ?? "Product"} — AnadaOne Clothing` },
-      { name: "description", content: loaderData?.description ?? "AnadaOne Clothing" },
-      { property: "og:title", content: `${loaderData?.name ?? "Product"} — AnadaOne` },
-      { property: "og:description", content: loaderData?.description ?? "AnadaOne Clothing" },
+      { title: `${loaderData?.name ?? "Product"} — Your Brand Clothing` },
+      { name: "description", content: loaderData?.description ?? "Your Brand Clothing" },
+      { property: "og:title", content: `${loaderData?.name ?? "Product"} — Your Brand` },
+      { property: "og:description", content: loaderData?.description ?? "Your Brand Clothing" },
     ],
   }),
   component: ProductPage,
@@ -130,7 +130,7 @@ function ProductPage() {
                   type="button"
                   onClick={() => setSize(s)}
                   className={cn(
-                    "h-12 min-w-14 rounded-full border px-5 text-xs uppercase tracking-[0.12em] transition-colors duration-300",
+                    "h-14 min-w-16 rounded-full border-2 px-6 text-sm font-semibold uppercase tracking-[0.12em] transition-colors duration-300",
                     size === s ? "border-foreground bg-primary text-primary-foreground" : "border-border hover:border-foreground",
                   )}
                 >
@@ -160,14 +160,14 @@ function ProductPage() {
               type="button"
               disabled={soldOut}
               onClick={() => size && add(product, size, qty)}
-              className="h-14 flex-1 rounded-full bg-primary text-[11px] uppercase tracking-[0.24em] text-primary-foreground transition-transform duration-500 hover:scale-[1.02] disabled:opacity-40"
+              className="h-16 flex-1 rounded-full bg-primary text-sm font-semibold uppercase tracking-[0.2em] text-primary-foreground transition-transform duration-500 hover:scale-[1.02] disabled:opacity-40"
             >
               {size ? "Add to bag" : "Select a size"}
             </button>
             <Link
               to="/checkout"
               onClick={() => size && add(product, size, qty)}
-              className="flex h-14 flex-1 items-center justify-center rounded-full border border-border text-[11px] uppercase tracking-[0.24em] transition-colors hover:border-foreground"
+              className="flex h-16 flex-1 items-center justify-center rounded-full border-2 border-foreground text-sm font-semibold uppercase tracking-[0.2em] transition-colors hover:border-foreground"
             >
               Buy now
             </Link>
@@ -175,9 +175,9 @@ function ProductPage() {
               type="button"
               aria-label="Save to wishlist"
               onClick={() => toggleWishlist(product.id)}
-              className="grid h-14 w-14 shrink-0 place-items-center rounded-full border border-border"
+              className="grid h-16 w-16 shrink-0 place-items-center rounded-full border-2 border-border"
             >
-              <Heart className={cn("h-4 w-4", liked && "fill-current")} strokeWidth={1.5} />
+              <Heart className={cn("h-5 w-5", liked && "fill-current")} strokeWidth={1.5} />
             </button>
           </div>
 

@@ -1,20 +1,20 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import coverHero from "@/assets/cover-hero.jpg.asset.json";
-import storeEditorial from "@/assets/store-editorial.jpg.asset.json";
+const coverHero = { url: "" };
+const storeEditorial = { url: "" };
 import { products } from "@/data/products";
 import { Reveal } from "@/components/site/Reveal";
 
 export const Route = createFileRoute("/collections")({
   head: () => ({
     meta: [
-      { title: "Collections — AnadaOne Clothing" },
+      { title: "Collections — Your Brand Clothing" },
       {
         name: "description",
         content:
-          "Explore AnadaOne collections: Monochrome Essentials, West Street Utility and Off-Season Fleece. Limited runs made in Durban.",
+          "Explore Your Brand collections: Monochrome Essentials, Main Street Utility and Off-Season Fleece. Limited runs made in your city.",
       },
-      { property: "og:title", content: "Collections — AnadaOne Clothing" },
-      { property: "og:description", content: "Limited-run streetwear collections made in Durban." },
+      { property: "og:title", content: "Collections — Your Brand Clothing" },
+      { property: "og:description", content: "Limited-run streetwear collections made in your city." },
     ],
   }),
   component: Collections,
@@ -25,10 +25,10 @@ const collections = [
     name: "Monochrome Essentials",
     count: "9 pieces",
     img: storeEditorial.url,
-    copy: "Two colours, zero noise. The foundation layer of the AnadaOne wardrobe.",
+    copy: "Two colours, zero noise. The foundation layer of the Your Brand wardrobe.",
   },
   {
-    name: "West Street Utility",
+    name: "Main Street Utility",
     count: "6 pieces",
     img: coverHero.url,
     copy: "Street silhouettes and heavy outerwear built for the pace of the CBD.",
