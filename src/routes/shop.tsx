@@ -26,14 +26,14 @@ export const Route = createFileRoute("/shop")({
   }),
   head: () => ({
     meta: [
-      { title: "Shop All — AnadaOne Clothing" },
+      { title: "Shop All — Your Brand Clothing" },
       {
         name: "description",
         content:
-          "Browse every AnadaOne piece: heavyweight hoodies, boxy tees, utility bottoms and headwear. Filter by size, price and availability.",
+          "Browse every Your Brand piece: heavyweight hoodies, boxy tees, utility bottoms and headwear. Filter by size, price and availability.",
       },
-      { property: "og:title", content: "Shop All — AnadaOne Clothing" },
-      { property: "og:description", content: "Premium Durban-made streetwear, delivered nationwide." },
+      { property: "og:title", content: "Shop All — Your Brand Clothing" },
+      { property: "og:description", content: "Premium your city-made streetwear, delivered nationwide." },
     ],
   }),
   component: Shop,

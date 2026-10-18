@@ -1,8 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { ArrowRight, Star } from "lucide-react";
-import coverHero from "@/assets/cover-hero.jpg.asset.json";
-import storeEditorial from "@/assets/store-editorial.jpg.asset.json";
+const coverHero = { url: "" };
+const storeEditorial = { url: "" };
 import { products, categories, formatPrice } from "@/data/products";
 import { ProductCard } from "@/components/site/ProductCard";
 import { Reveal } from "@/components/site/Reveal";
@@ -10,13 +10,13 @@ import { Reveal } from "@/components/site/Reveal";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "AnadaOne Clothing — Premium South African Streetwear" },
+      { title: "Your Brand Clothing — Premium South African Streetwear" },
       {
         name: "description",
         content:
-          "Designed for those who move different. Heavyweight hoodies, boxy tees and utility bottoms, made in Durban and delivered nationwide.",
+          "Designed for those who move different. Heavyweight hoodies, boxy tees and utility bottoms, made in your city and delivered nationwide.",
       },
-      { property: "og:title", content: "AnadaOne Clothing — Designed For Those Who Move Different" },
+      { property: "og:title", content: "Your Brand Clothing — Designed For Those Who Move Different" },
       {
         property: "og:description",
         content: "Premium South African streetwear built with quality, confidence and individuality.",
@@ -29,7 +29,7 @@ export const Route = createFileRoute("/")({
 const reviews = [
   {
     name: "Sne M.",
-    city: "Durban",
+    city: "your city",
     text: "The hoodie weight is unreal. Feels like something I'd pay triple for overseas.",
   },
   { name: "Tebogo K.", city: "Johannesburg", text: "Ordered Tuesday, wearing it Thursday. Fit is perfect." },
@@ -54,7 +54,7 @@ function Home() {
       <section className="relative h-dvh min-h-[620px] overflow-hidden bg-black">
         <img
           src={coverHero.url}
-          alt="Model wearing an AnadaOne black-and-white striped polo and black cap"
+          alt="Model wearing an Your Brand black-and-white striped polo and black cap"
           width={1600}
           height={1920}
           className="absolute inset-0 h-[118%] w-full object-cover object-center opacity-90 will-change-transform"
@@ -66,7 +66,7 @@ function Home() {
             className="text-[11px] uppercase tracking-[0.3em] text-white/70"
             style={{ animation: "reveal-up 900ms var(--ease-lux) 120ms both" }}
           >
-            Durban · Est. AnadaOne
+            your city · Est. Your Brand
           </p>
           <h1
             className="display-xl mt-6 max-w-[16ch] text-[clamp(2.6rem,9vw,7.5rem)] text-white"
@@ -111,7 +111,7 @@ function Home() {
               <span>·</span>
               <span>Nationwide shipping</span>
               <span>·</span>
-              <span>Made in Durban</span>
+              <span>Made in your city</span>
               <span>·</span>
               <span>Limited runs</span>
               <span>·</span>
@@ -119,7 +119,7 @@ function Home() {
               <span>·</span>
               <span>Nationwide shipping</span>
               <span>·</span>
-              <span>Made in Durban</span>
+              <span>Made in your city</span>
               <span>·</span>
               <span>Limited runs</span>
               <span>·</span>
@@ -150,7 +150,7 @@ function Home() {
           <div className="relative overflow-hidden rounded-3xl">
             <img
               src={storeEditorial.url}
-              alt="Two models in AnadaOne monochrome essentials in front of the store"
+              alt="Two models in Your Brand monochrome essentials in front of the store"
               loading="lazy"
               width={1408}
               height={1008}
@@ -163,7 +163,7 @@ function Home() {
                 Monochrome Essentials
               </h2>
               <p className="max-w-sm text-sm text-white/75">
-                Nine pieces. Two colours. Cut heavy, finished clean — the foundation of the AnadaOne wardrobe.
+                Nine pieces. Two colours. Cut heavy, finished clean — the foundation of the Your Brand wardrobe.
               </p>
               <div>
                 <Link
@@ -226,7 +226,7 @@ function Home() {
           {[
             { k: "01", t: "Trending Now", d: "The Atelier Hoodie is restocking weekly and selling out in days." },
             { k: "02", t: "Nationwide", d: "Courier delivery to every province in 2–4 working days." },
-            { k: "03", t: "Store Visit", d: "West Street, 320 Building, 4th Floor, Shop 423D — Durban CBD." },
+            { k: "03", t: "Store Visit", d: "Your store address — City Centre." },
           ].map((item, i) => (
             <Reveal key={item.k} delay={i * 100}>
               <p className="eyebrow">{item.k}</p>
@@ -242,7 +242,7 @@ function Home() {
         <div className="grid items-center gap-12 lg:grid-cols-2">
           <Reveal>
             <p className="font-display text-2xl font-extrabold uppercase leading-tight tracking-tight sm:text-3xl">
-              AnadaOne started in a single shop in Durban CBD with one belief — that South African
+              Your Brand started in a single shop in City Centre with one belief — that South African
               streetwear can hold its own next to anything made abroad.
             </p>
             <p className="mt-6 max-w-xl text-sm leading-relaxed text-muted-foreground">
@@ -260,7 +260,7 @@ function Home() {
           <Reveal delay={120}>
             <img
             src={storeEditorial.url}
-            alt="AnadaOne studio editorial in the Durban store"
+            alt="Your Brand studio editorial in the your city store"
               loading="lazy"
               className="aspect-[4/3] w-full rounded-3xl object-cover shadow-soft"
             />
@@ -290,7 +290,7 @@ function Home() {
       </Section>
 
       {/* INSTAGRAM */}
-      <Section eyebrow="@anadaone" title="Instagram">
+      <Section eyebrow="@yourbrand" title="Instagram">
         <div className="grid grid-cols-2 gap-3 md:grid-cols-4 lg:grid-cols-6">
           {products.slice(0, 6).map((p, i) => (
             <Reveal key={p.id} delay={i * 60}>

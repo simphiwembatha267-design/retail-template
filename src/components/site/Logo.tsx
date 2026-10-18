@@ -31,7 +31,7 @@ export function Wordmark({ className }: { className?: string }) {
     <span className={cn("flex items-center gap-2", className)}>
       <LogoMark />
       <span className="font-display text-[15px] font-extrabold uppercase tracking-[0.22em]">
-        AnadaOne
+        Your Brand
       </span>
     </span>
   );

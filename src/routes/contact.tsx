@@ -8,14 +8,14 @@ import { Reveal } from "@/components/site/Reveal";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact & Store — AnadaOne Clothing, Durban CBD" },
+      { title: "Contact & Store — Your Brand Clothing, City Centre" },
       {
         name: "description",
         content:
-          "Visit AnadaOne at 320 Building, 4th Floor, Shop 423D, West Street, Durban CBD. WhatsApp +27 79 909 0379. Nationwide delivery.",
+          "Visit Your Brand at 320 Building, 4th Floor, Shop 423D, West Street, City Centre. WhatsApp +27 79 909 0379. Nationwide delivery.",
       },
-      { property: "og:title", content: "Contact AnadaOne Clothing" },
-      { property: "og:description", content: "Durban CBD storefront, WhatsApp support and nationwide delivery." },
+      { property: "og:title", content: "Contact Your Brand Clothing" },
+      { property: "og:description", content: "City Centre storefront, WhatsApp support and nationwide delivery." },
     ],
   }),
   component: Contact,
@@ -46,7 +46,7 @@ function Contact() {
               <div>
                 <p className="eyebrow">Store</p>
                 <p className="mt-3 text-lg leading-relaxed">
-                  Durban CBD
+                  City Centre
                   <br />
                   West Street
                   <br />
@@ -128,8 +128,8 @@ function Contact() {
 
       <Reveal className="mt-16">
         <iframe
-          title="AnadaOne store location on West Street, Durban CBD"
-          src="https://www.google.com/maps?q=320%20West%20Street%2C%20Durban%20CBD&output=embed"
+          title="Your Brand store location on West Street, City Centre"
+          src="https://www.google.com/maps?q=320%20West%20Street%2C%20your city%20CBD&output=embed"
           loading="lazy"
           className="h-[420px] w-full rounded-3xl border border-border grayscale"
         />

@@ -187,3 +187,9 @@
     transform: translateY(0);
   }
 }
+
+/* Template: empty image slots render as clean blank surfaces */
+img:not([src]),
+img[src=""] {
+  opacity: 0;
+}
