@@ -11,7 +11,7 @@ export const Route = createFileRoute("/collections")({
       {
         name: "description",
         content:
-          "Explore Your Brand collections: Monochrome Essentials, West Street Utility and Off-Season Fleece. Limited runs made in your city.",
+          "Explore Your Brand collections: Monochrome Essentials, Main Street Utility and Off-Season Fleece. Limited runs made in your city.",
       },
       { property: "og:title", content: "Collections — Your Brand Clothing" },
       { property: "og:description", content: "Limited-run streetwear collections made in your city." },
@@ -28,7 +28,7 @@ const collections = [
     copy: "Two colours, zero noise. The foundation layer of the Your Brand wardrobe.",
   },
   {
-    name: "West Street Utility",
+    name: "Main Street Utility",
     count: "6 pieces",
     img: coverHero.url,
     copy: "Street silhouettes and heavy outerwear built for the pace of the CBD.",

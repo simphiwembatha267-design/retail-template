@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { ArrowRight, Star } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 const coverHero = { url: "" };
 const storeEditorial = { url: "" };
 import { products, categories, formatPrice } from "@/data/products";
@@ -25,16 +25,6 @@ export const Route = createFileRoute("/")({
   }),
   component: Home,
 });
-
-const reviews = [
-  {
-    name: "Sne M.",
-    city: "your city",
-    text: "The hoodie weight is unreal. Feels like something I'd pay triple for overseas.",
-  },
-  { name: "Tebogo K.", city: "Johannesburg", text: "Ordered Tuesday, wearing it Thursday. Fit is perfect." },
-  { name: "Ayanda D.", city: "Cape Town", text: "Quiet luxury done properly. The finishing on the cargos is next level." },
-];
 
 function Home() {
   const [offset, setOffset] = useState(0);
@@ -215,75 +205,6 @@ function Home() {
           {bestSellers.map((p, i) => (
             <Reveal key={p.id} delay={i * 90}>
               <ProductCard product={p} />
-            </Reveal>
-          ))}
-        </div>
-      </Section>
-
-      {/* TRENDING STRIP */}
-      <section className="border-y border-border bg-surface">
-        <div className="mx-auto grid max-w-[1600px] gap-10 px-5 py-20 md:grid-cols-3 md:px-10 md:py-28">
-          {[
-            { k: "01", t: "Trending Now", d: "The Atelier Hoodie is restocking weekly and selling out in days." },
-            { k: "02", t: "Nationwide", d: "Courier delivery to every province in 2–4 working days." },
-            { k: "03", t: "Store Visit", d: "Your store address — City Centre." },
-          ].map((item, i) => (
-            <Reveal key={item.k} delay={i * 100}>
-              <p className="eyebrow">{item.k}</p>
-              <h3 className="mt-4 font-display text-2xl font-extrabold uppercase tracking-tight">{item.t}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{item.d}</p>
-            </Reveal>
-          ))}
-        </div>
-      </section>
-
-      {/* ABOUT */}
-      <Section eyebrow="Our story" title="About the Brand">
-        <div className="grid items-center gap-12 lg:grid-cols-2">
-          <Reveal>
-            <p className="font-display text-2xl font-extrabold uppercase leading-tight tracking-tight sm:text-3xl">
-              Your Brand started in a single shop in City Centre with one belief — that South African
-              streetwear can hold its own next to anything made abroad.
-            </p>
-            <p className="mt-6 max-w-xl text-sm leading-relaxed text-muted-foreground">
-              Every piece is developed in small runs, sampled by hand and pressure-tested on the
-              street before it ever reaches the rail. No filler, no seasonal noise — just garments
-              built to outlast the trend cycle.
-            </p>
-            <Link
-              to="/about"
-              className="mt-8 inline-flex h-13 items-center rounded-full border border-border px-8 py-4 text-[11px] uppercase tracking-[0.22em] transition-colors hover:bg-primary hover:text-primary-foreground"
-            >
-              Read our story
-            </Link>
-          </Reveal>
-          <Reveal delay={120}>
-            <img
-            src={storeEditorial.url}
-            alt="Your Brand studio editorial in the your city store"
-              loading="lazy"
-              className="aspect-[4/3] w-full rounded-3xl object-cover shadow-soft"
-            />
-          </Reveal>
-        </div>
-      </Section>
-
-      {/* REVIEWS */}
-      <Section eyebrow="Word of mouth" title="Customer Reviews">
-        <div className="grid gap-4 md:grid-cols-3">
-          {reviews.map((r, i) => (
-            <Reveal key={r.name} delay={i * 100}>
-              <figure className="h-full rounded-2xl border border-border p-8 shadow-soft">
-                <div className="flex gap-1">
-                  {Array.from({ length: 5 }).map((_, s) => (
-                    <Star key={s} className="h-3.5 w-3.5 fill-current" />
-                  ))}
-                </div>
-                <blockquote className="mt-6 text-base leading-relaxed">"{r.text}"</blockquote>
-                <figcaption className="mt-6 text-[11px] uppercase tracking-[0.2em] text-muted-foreground">
-                  {r.name} · {r.city}
-                </figcaption>
-              </figure>
             </Reveal>
           ))}
         </div>

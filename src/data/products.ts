@@ -100,7 +100,7 @@ export const products: Product[] = [
   {
     id: "6",
     slug: "west-street-polo",
-    name: "West Street Polo",
+    name: "Main Street Polo",
     price: 520,
     category: "Polos",
     images: [greenPoloStreet.url, greenPoloFront.url],
@@ -152,5 +152,5 @@ export const formatPrice = (v: number) =>
     maximumFractionDigits: 0,
   }).format(v);
 
-export const WHATSAPP = "+27 79 909 0379";
-export const WHATSAPP_LINK = "https://wa.me/27799090379";
+export const WHATSAPP = "+00 000 000 0000";
+export const WHATSAPP_LINK = "https://wa.me/0000000000";

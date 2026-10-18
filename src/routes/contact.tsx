@@ -48,9 +48,9 @@ function Contact() {
                 <p className="mt-3 text-lg leading-relaxed">
                   City Centre
                   <br />
-                  West Street
+                  Main Street
                   <br />
-                  Main Street, 4th Floor
+                  Main Street
                   <br />
                   Shop 1
                 </p>
@@ -128,7 +128,7 @@ function Contact() {
 
       <Reveal className="mt-16">
         <iframe
-          title="Your Brand store location on West Street, City Centre"
+          title="Your Brand store location on Main Street, City Centre"
           src="https://www.google.com/maps?q=320%20West%20Street%2C%20your city%20CBD&output=embed"
           loading="lazy"
           className="h-[420px] w-full rounded-3xl border border-border grayscale"
