@@ -160,14 +160,14 @@ function ProductPage() {
               type="button"
               disabled={soldOut}
               onClick={() => size && add(product, size, qty)}
-              className="h-16 flex-1 rounded-full bg-primary text-sm font-semibold uppercase tracking-[0.2em] text-primary-foreground transition-transform duration-500 hover:scale-[1.02] disabled:opacity-40"
+              className="flex h-14 flex-1 items-center justify-center rounded-full bg-primary text-xs uppercase tracking-[0.24em] text-primary-foreground transition-transform hover:scale-[1.02] disabled:opacity-40"
             >
               {size ? "Add to bag" : "Select a size"}
             </button>
             <Link
               to="/checkout"
               onClick={() => size && add(product, size, qty)}
-              className="flex h-16 flex-1 items-center justify-center rounded-full border-2 border-foreground text-sm font-semibold uppercase tracking-[0.2em] transition-colors hover:border-foreground"
+              className="flex h-14 flex-1 items-center justify-center rounded-full border border-border text-xs uppercase tracking-[0.24em] transition-transform hover:scale-[1.02] hover:border-foreground"
             >
               Buy now
             </Link>
@@ -175,7 +175,7 @@ function ProductPage() {
               type="button"
               aria-label="Save to wishlist"
               onClick={() => toggleWishlist(product.id)}
-              className="grid h-16 w-16 shrink-0 place-items-center rounded-full border-2 border-border"
+              className="grid h-14 w-14 shrink-0 place-items-center rounded-full border border-border"
             >
               <Heart className={cn("h-5 w-5", liked && "fill-current")} strokeWidth={1.5} />
             </button>
