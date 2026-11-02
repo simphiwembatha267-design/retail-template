@@ -160,14 +160,14 @@ function ProductPage() {
               type="button"
               disabled={soldOut}
               onClick={() => size && add(product, size, qty)}
-              className="flex h-14 flex-1 items-center justify-center rounded-full bg-primary text-xs uppercase tracking-[0.24em] text-primary-foreground transition-transform hover:scale-[1.02] disabled:opacity-40"
+              className="flex h-14 w-full shrink-0 items-center sm:flex-1 justify-center rounded-full bg-primary text-xs uppercase tracking-[0.24em] text-primary-foreground transition-transform hover:scale-[1.02] disabled:opacity-40"
             >
               {size ? "Add to bag" : "Select a size"}
             </button>
             <Link
               to="/checkout"
               onClick={() => size && add(product, size, qty)}
-              className="flex h-14 flex-1 items-center justify-center rounded-full border border-border text-xs uppercase tracking-[0.24em] transition-transform hover:scale-[1.02] hover:border-foreground"
+              className="flex h-14 w-full shrink-0 items-center sm:flex-1 justify-center rounded-full border border-border text-xs uppercase tracking-[0.24em] transition-transform hover:scale-[1.02] hover:border-foreground"
             >
               Buy now
             </Link>
