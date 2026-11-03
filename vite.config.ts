@@ -12,8 +12,10 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
     // Static-hosting build (e.g. GitHub Pages): GH_PAGES=true prerenders a single
-    // SPA shell and serves every route client-side; pair it with NITRO_PRESET=static.
-    // Leave unset for normal Lovable hosting (SSR on Cloudflare) — untouched.
+    // SPA shell and serves every route client-side; nitro's server packaging is
+    // skipped because a static host runs no server. Leave unset for normal
+    // Lovable hosting (SSR on Cloudflare) — untouched.
     spa: process.env.GH_PAGES === "true" ? { enabled: true } : undefined,
+    nitro: process.env.GH_PAGES === "true" ? false : undefined,
   },
 });
