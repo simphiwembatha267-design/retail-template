@@ -11,5 +11,9 @@ export default defineConfig({
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
     server: { entry: "server" },
+    // Static-hosting build (e.g. GitHub Pages): GH_PAGES=true prerenders a single
+    // SPA shell and serves every route client-side; pair it with NITRO_PRESET=static.
+    // Leave unset for normal Lovable hosting (SSR on Cloudflare) — untouched.
+    spa: process.env.GH_PAGES === "true" ? { enabled: true } : undefined,
   },
 });
